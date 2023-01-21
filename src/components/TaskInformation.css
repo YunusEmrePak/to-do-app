@@ -1,0 +1,51 @@
+.task-information {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 47rem;
+    height: 3rem;
+}
+
+.created-task {
+    display: flex;
+    justify-content: center;
+    margin-left: .8rem;
+}
+
+.created-label {
+    color: #5BC0F8;
+}
+
+.task-number-out {
+    background-color: #58287F;
+    color: #fff;
+    border-radius: 50%;
+    margin-left: .5rem;
+    width: 1.3rem;
+    height: 1.3rem;
+    text-align: center;
+}
+
+.task-number {
+    margin-bottom: .1rem;
+}
+
+.completed-tasks {
+    display: flex;
+    justify-content: center;
+    margin-right: .8rem;
+}
+
+.completed-label {
+    color: #5BC0F8;
+}
+
+.completed-tasks-number-out {
+    background-color: #58287F;
+    color: #fff;
+    border-radius: 3rem;
+    margin-left: .5rem;
+    width: 3.5rem;
+    height: 1.3rem;
+    text-align: center;
+}
