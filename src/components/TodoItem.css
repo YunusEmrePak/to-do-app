@@ -1,38 +1,37 @@
 .todo-items {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #144658;
-    width: 47rem;
-    height: 4rem;
-    border-radius: 3rem;
-    margin: .3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #262626;
+  width: 47rem;
+  height: 4rem;
+  border-radius: 3rem;
+  margin: 0.3rem;
 }
 
 .left {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: .8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 0.8rem;
 }
 
-input[type="checkbox"] {
-    cursor: pointer;
-    border-radius: 50%;
+.left input {
+  cursor: pointer;
 }
 
 .item-task {
-    color: #fff;
-    margin-left: .3rem;
+  color: #f2f2f2;
+  margin-left: 0.3rem;
 }
 
 .delete-button {
-    background-color: #579BB1;
-    border: none;
-    font-size: 1rem;
-    border-radius: 2rem;
-    color: #fff;
-    cursor: pointer;
-    margin-right: 1rem;
-    height: 2rem;
+  background-color: #808080;
+  border: none;
+  font-size: 1rem;
+  border-radius: 2rem;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 1rem;
+  height: 2rem;
 }
