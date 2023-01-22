@@ -21,16 +21,16 @@ const DUMMY_TASKS = [
 ];
 
 const Main = () => {
-  const [newTasks, setNewTasks] = useState(DUMMY_TASKS);
+  const [newTasks, setNewTasks] = useState([]);
   const [taskLength, setTaskLength] = useState(newTasks.length);
   const [checkCounter, setCheckCounter] = useState(0);
 
   const carryData = (data) => {
     setNewTasks((prevData) => {
-      setTaskLength((prev) => {
-        return prev + 1;
-      });
       return [data, ...prevData];
+    });
+    setTaskLength((prev) => {
+      return prev + 1;
     });
   };
 
@@ -49,11 +49,20 @@ const Main = () => {
     }
   };
 
-  localStorage.setItem("items", JSON.stringify(newTasks));
+  useEffect(() => {
+    if (newTasks.length > 0) {
+      console.log("sdfdsf");
+      localStorage.setItem("items", JSON.stringify(newTasks));
+    }
+  }, [newTasks]);
 
   useEffect(() => {
     const items = JSON.parse(localStorage.getItem("items"));
-    setNewTasks(items);
+    console.log(items);
+    if (items) {
+      setNewTasks(items);
+      setTaskLength(items.length);
+    }
   }, []);
 
   const onCheckControl = (isChecked) => {
