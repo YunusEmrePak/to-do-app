@@ -25,6 +25,10 @@
   margin-left: 0.3rem;
 }
 
+input:checked + .item-task {
+  text-decoration: line-through;
+}
+
 .delete-button {
   background-color: #808080;
   border: none;

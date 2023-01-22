@@ -3,14 +3,15 @@ import TodoItem from "./TodoItem";
 
 import "./TodoItems.css";
 
-const TodoItems = () => {
-  return (
-    <div>
-      <TodoItem task="todoApp" />
-      <TodoItem task="todoApp2" />
-      <TodoItem task="todoApp3" />
-    </div>
-  );
+const TodoItems = (props) => {
+  const carryChecked = (isChecked) => {
+    props.onChecked(isChecked);
+  };
+  const changedTasks = props.item.map((task) => (
+    <TodoItem item={task} key={task.id} onCarryChecked={carryChecked} />
+  ));
+
+  return <div className="all-items">{changedTasks}</div>;
 };
 
 export default TodoItems;
