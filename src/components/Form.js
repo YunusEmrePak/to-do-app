@@ -15,8 +15,9 @@ const Form = (props) => {
     };
 
     setEnteredTask("");
-
-    props.onCarryData(newTasks);
+    if (enteredTask !== "") {
+      props.onCarryData(newTasks);
+    }
   };
 
   const taskHandler = (event) => {

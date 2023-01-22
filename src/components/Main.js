@@ -34,6 +34,28 @@ const Main = () => {
     });
   };
 
+  const deleteHandler = (deleting, isChecked) => {
+    const filteredTasks = newTasks.filter((element) => {
+      return element.id !== deleting;
+    });
+    setNewTasks(filteredTasks);
+    setTaskLength((prev) => {
+      return prev - 1;
+    });
+    if (isChecked) {
+      setCheckCounter((prev) => {
+        return prev - 1;
+      });
+    }
+  };
+
+  localStorage.setItem("items", JSON.stringify(newTasks));
+
+  useEffect(() => {
+    const items = JSON.parse(localStorage.getItem("items"));
+    setNewTasks(items);
+  }, []);
+
   const onCheckControl = (isChecked) => {
     if (isChecked) {
       setCheckCounter((prev) => {
@@ -54,7 +76,11 @@ const Main = () => {
       <div className="tasks">
         <TaskInformation len={taskLength} counter={checkCounter} />
       </div>
-      <TodoItems item={newTasks} onChecked={onCheckControl} />
+      <TodoItems
+        item={newTasks}
+        onChecked={onCheckControl}
+        onDelete={deleteHandler}
+      />
     </main>
   );
 };
