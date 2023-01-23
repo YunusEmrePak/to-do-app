@@ -30,6 +30,8 @@ header {
 
 .header__logo img {
     margin-top: 5rem;
+    margin-right: .5rem;
+    width: 4rem;
 }
 
 .header__logo span:nth-child(2) {

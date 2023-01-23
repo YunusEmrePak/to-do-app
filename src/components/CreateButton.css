@@ -6,3 +6,8 @@
     color: #fff;
     cursor: pointer;
 }
+
+.create-button:hover {
+    background-color: #307daa;
+    color: rgb(245, 235, 235);
+}

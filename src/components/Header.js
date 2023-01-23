@@ -1,5 +1,5 @@
 import React from "react";
-import todoLogo from '../images/logo.png';
+import todoLogo from '../images/logo2.png';
 
 import "./Header.css";
 

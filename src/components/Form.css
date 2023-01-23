@@ -11,8 +11,26 @@ form input {
   color: #fff;
   border: none;
   height: 3rem;
-  width: 40rem;
+  width: 35rem;
   margin-right: 1rem;
-  border-radius: .7rem;
+  border-radius: 0.7rem;
   padding: 0.5rem;
 }
+
+input[type="date"] {
+  width: 1.9rem;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  border-radius: .4rem;
+  opacity: 0.8;
+  filter: invert(1);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+
+

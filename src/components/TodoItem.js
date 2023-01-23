@@ -18,10 +18,17 @@ const TodoItem = (props) => {
     <div className="todo-items">
       <div className="left">
         <input type="checkbox" onChange={checkboxHandler} checked={isChecked} />
-        <div className="item-task">{props.item.title}</div>
+        <div className="item-date">
+          <div className="date-tasks">
+            <div className="year">{props.item.year}</div>
+            <div className="month">{props.item.month}</div>
+            <div className="day">{props.item.day}</div>
+          </div>
+          <div className="item-task">{props.item.title}</div>
+        </div>
       </div>
       <button className="delete-button" onClick={deleteHandler}>
-        Delete Task
+      🗑️
       </button>
     </div>
   );
